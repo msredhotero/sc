@@ -1,0 +1,48 @@
+API's
+
+////// guardar respuestas del formulario una por una ////////////
+
+url:
+http://localhost/jcs.git/trunk/api/formulariosdetalles/insertbyone.php
+
+param:
+
+'usuario' => // usuario logueado del sistema,
+'refformulariosconector' => (int)// dato que vincula formularios con la tarea, viene en la api (http://localhost/jcs.git/trunk/api/ordenestrabajocabecera/getallusuario.php),
+'reftabla' => 4 // por ahora siempre 4 va a depender si viene de una orden de trabajo detalle o de una solicitud de visita,
+'idreferencia' => // id de la orden de trabajo detalle, esta en 'idotd'(http://localhost/jcs.git/trunk/api/ordenestrabajocabecera/getallusuario.php),
+'refpreguntascuestionario' => // id de la pregunta,
+'refrespuestascuestionario' => // id de la respuesta en caso de no tenerlo 0,
+'respuesta' => // valor de la respuesta,
+'archivo' => // aca se carga cuando se sube un archivo ,
+'tipo' => // el tipo de archivo (pdf, xls, etc),
+'carpeta' => '' // dejar vacio y es si queremos guardar archivos en el servidor,
+'latitud' => // utilizado para las coordenadas,
+'longitud' => // utilizado para las coordenadas
+
+devuelve:
+
+mensaje: si esta todo ok o si hay algun error
+error: true o false
+
+
+//////////////////////// fin /////////////////////////////////////////
+
+//// ubicacion usuarios check in/out //////////////////////////////////////////////
+
+url:
+http://localhost/jcs.git/trunk/api/ubicacionusuarios/insert.php
+
+param:
+'refusuarios' => // id del usuario,
+'checkin' => // '0' o '1' o '2' si es 0=> entra siempre, es para marcar la ubicacion solamente, 1=> para el checkin siempre y cuando no existe otro 1 en la base de datos, 2=> para marcar el checkout siempre y cuando exista un checkin en '1'.
+'latitud' => '-34.607869',
+'longitud' => '-58.426362',
+'fecha' => '2022-09-13 20:57:00'
+
+devuelve:
+
+mensaje: si esta todo ok o si hay algun error
+error: true o false
+
+

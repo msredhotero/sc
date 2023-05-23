@@ -1,0 +1,32 @@
+API's
+
+Usuarios:
+
+login (para loguearse al sistema para marcar el login activo)
+
+dominio/api/usuarios/login.php?email=msredhotero@msn.com&password=$$$$$
+
+method: GET
+param: {
+	email (string),
+	password (string)
+}
+Return: {
+	mensaje (string),
+	error (bool)
+}
+
+devuelve
+
+login simple (solo para verificar a trave del email que este el usuario logueado para ingresar con el PIN)
+
+dominio/api/usuarios/loginsimple.php?email=msredhotero@msn.com
+
+method: GET
+param: {
+	email (string)
+}
+Return: {
+	mensaje (string),
+	error (bool)
+}
