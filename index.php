@@ -1,7 +1,7 @@
 <?php
 
 spl_autoload_register(function($clase){
-  include_once "includes/" .$clase. ".php";        
+  include_once "flota/includes/" .$clase. ".php";        
 });
 
 
@@ -21,20 +21,20 @@ $Session->closeSession();
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="flota/assets/img/favicon.png">
   <title>
     <?php echo $Globales::$tituloWeb; ?>
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="flota/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="flota/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="flota/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+  <link id="pagestyle" href="flota/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -78,7 +78,7 @@ $Session->closeSession();
             </div>
             <div class="col-md-6">
               <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n0">
-                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n2" style="background-image:url('assets/img/curved-images/curved-11.jpg')"></div>
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n2" style="background-image:url('flota/assets/img/curved-images/road-bridge-blur-port-wallpaper-preview.jpg')"></div>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ $Session->closeSession();
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mb-4 mx-auto text-center">
-          <a href="https://www.cuchipuy.cl/" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+          <a href="https://www.simplecarga.com/" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
             Web
           </a>
           
@@ -111,10 +111,10 @@ $Session->closeSession();
   </footer>
   <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
   <!--   Core JS Files   -->
-  <script src="assets/js/core/popper.min.js"></script>
-  <script src="assets/js/core/bootstrap.min.js"></script>
-  <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="flota/assets/js/core/popper.min.js"></script>
+  <script src="flota/assets/js/core/bootstrap.min.js"></script>
+  <script src="flota/assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="flota/assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -127,8 +127,8 @@ $Session->closeSession();
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="flota/assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
+  <script src="flota/assets/js/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
@@ -143,7 +143,7 @@ $Session->closeSession();
                     var message = "";
                     //hacemos la petición ajax
                     $.ajax({
-                        url: 'ajax/ajax.php',
+                        url: 'flota/ajax/ajax.php',
                         type: 'POST',
                         // Form data
                         //datos del formulario
@@ -179,7 +179,7 @@ $Session->closeSession();
                                     timer: 1500,
                                     showConfirmButton: false
                                 });
-                                url = "dashboard/";
+                                url = "sistemas.php";
                                 $(location).attr('href',url);
                             }
                         },
